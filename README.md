@@ -14,7 +14,7 @@
 
 ## Usage
 
-    vagrant init quanlong/trusty64-cn
+    vagrant init ubuntu-cn/trusty64
     registry_mirror=http://00000000.m.daocloud.io vagrant up
 
 Please replace `registry_mirror` with your **docker-registry** mirror url, or [register][] a new one.
@@ -39,4 +39,4 @@ See http://docs.vagrantup.com/v2/cli/package.html for more options.
 
 Install box with,
 
-    vagrant box add trusty64-cn-`date "+%Y%m%d"`.box --name trusty64-cn
+    vagrant box add trusty64-cn-`date "+%Y%m%d"`.box --name ubuntu-cn/trusty64
