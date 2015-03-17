@@ -15,9 +15,13 @@
 ## Usage
 
     vagrant init ubuntu-cn/trusty64
-    registry_mirror=http://00000000.m.daocloud.io vagrant up
+    vagrant up
 
-Please replace `registry_mirror` with your **docker-registry** mirror url, or [register][] a new one.
+If you want to accelerate downloading speed of docker images, set a fast **docker-registry** mirror url in your Vagrantfile like this,
+
+    config.vm.provision "shell", inline: "add-docker-registry http://daocloud.io"
+
+You need replace mirror url to a real address, [register][] one if you don't have yet.
 
 [register]: https://www.daocloud.io/account/signup?invite=637512f2
 

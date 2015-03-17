@@ -13,5 +13,10 @@ gem sources --remove https://rubygems.org/
 gem sources --remove http://rubygems.org/
 gem sources -a https://ruby.taobao.org/
 
+# Install add-docker-registry
+echo "Installing add-docker-registry"
+cp /vagrant/add-docker-registry /usr/bin
+chmod 755 /usr/bin/add-docker-registry
+
 # Update
 sudo apt-get update
