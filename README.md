@@ -1,6 +1,8 @@
 # vagrant-box-ubuntu-cn
 
->> Ubuntu Vagrant Box optimized for CN users
+> Ubuntu Vagrant Box optimized for CN users
+
+[![build](https://img.shields.io/travis/cybertk/vagrant-box-ubuntu-cn.svg)](https://travis-ci.org/cybertk/vagrant-box-ubuntu-cn)
 
 ## Optmizations
 

@@ -1,0 +1,17 @@
+language: ruby
+install:
+  - sudo echo "deb http://download.virtualbox.org/virtualbox/debian precise contrib" | sudo tee -a /etc/apt/sources.list
+  - wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+  - sudo apt-get update
+  - sudo apt-get -y install virtualbox-4.3
+  - VBoxManage --version
+# - uname -r
+# - sudo apt-get -y install linux-headers-$(uname -r)
+# - sudo apt-get -y install virtualbox --fix-missing
+# - VBoxManage -v
+# - wget http://download.virtualbox.org/virtualbox/4.3.26/virtualbox-4.3_4.3.26-98988~Ubuntu~precise_amd64.deb
+# - sudo dpkg -i virtualbox-4.3_4.3.26-98988~Ubuntu~precise_amd64.deb
+  - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb
+  - sudo dpkg -i vagrant_1.7.2_x86_64.deb
+script:
+  - vagrant up
