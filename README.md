@@ -1,18 +1,23 @@
 # vagrant-box-ubuntu-cn
 
->> Ubuntu Vagrant Box optimized for CN users
+> Ubuntu Vagrant Box optimized for CN users
 
 ## Optmizations
 
-- Replace apt-get source with [aliyun.com](http://mirrors.aliyun.com/.help/ubuntu.html)
-- Replace ruby-gem source with [taobao](https://ruby.taobao.org/)
+- Replace apt-get source with [aliyun.com][]
+- Replace ruby-gem source with [taobao][]
+- Support docker-registry mirror of [daocloud.io][]
+
+[aliyun]: http://mirrors.aliyun.com/.help/ubuntu.html
+[taobao]: https://ruby.taobao.org/
+[daocloud.io]: https://www.daocloud.io/account/signup?invite=637512f2
 
 ## Usage
 
     vagrant init quanlong/trusty64-cn
-    daocloud_url=http://00000000.m.daocloud.io vagrant up
+    registry_mirror=http://00000000.m.daocloud.io vagrant up
 
-Please replace `daocloud_url` with your daocloud accelerator url, or [register][] a new one.
+Please replace `registry_mirror` with your **docker-registry** mirror url, or [register][] a new one.
 
 [register]: https://www.daocloud.io/account/signup?invite=637512f2
 
