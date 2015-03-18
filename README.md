@@ -23,16 +23,7 @@
 
 ### Package at local
 
-You can also package the box at local with
-
-    vagrant package --output trusty64-cn-`date "+%Y%m%d"`.box
-
-and then install it by
-
-    vagrant box add trusty64-cn-`date "+%Y%m%d"`.box --name ubuntu-cn/trusty64
-
-For more options, see http://docs.vagrantup.com/v2/cli/package.html
-
+    ./install.sh
 
 If you want to accelerate downloading speed of docker images, set a fast **docker-registry** mirror url in your Vagrantfile like this,
 
