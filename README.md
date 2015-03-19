@@ -36,3 +36,7 @@ You need replace mirror url to a real address, [register][] one if you don't hav
 ## Contributing
 
 Any contribution is more than welcome!
+
+## License
+
+MIT license
