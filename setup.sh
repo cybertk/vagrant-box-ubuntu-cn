@@ -20,7 +20,3 @@ chmod 755 /usr/bin/add-docker-registry
 
 # Update
 sudo apt-get update
-
-# Setup insecure keypair
-# See https://github.com/cybertk/vagrant-box-ubuntu-cn/issues/1
-curl -k https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub > ~/.ssh/authorized_keys
