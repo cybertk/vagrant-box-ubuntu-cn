@@ -1,14 +1,36 @@
 #!/bin/sh
 # Helper script for installing ubuntu-cn/trusty64 on local
 
-# Destroy existing vm and start up new
-vagrant destroy -f
+set -e
+
+# Customizations
+name=ubuntu-cn/trusty64
+version=`date "+%Y%m%d"`
+box=ubuntu-cn-trusty64.box
+metadata=metadata.json
+
+# Package to box
 vagrant up
-
-box=ubuntu-cn-trusty64-`date "+%Y%m%d"`.box
-
-# Package and install.
-# For more options, see http://docs.vagrantup.com/v2/cli/package.html
-rm -f $box
 vagrant package --output $box
-vagrant box add -f $box --name ubuntu-cn/trusty64
+
+# Box Metadata, see http://docs.vagrantup.com/v2/boxes/format.html
+cat <<EOF > $metadata
+{
+  "name": "$name",
+  "description": "Ubuntu 14.04 optimized for CN users",
+  "versions": [{
+    "version": "$version",
+    "providers": [{
+      "name": "virtualbox",
+      "url": "$box"
+     }]
+  }]
+}
+EOF
+
+# Install box
+vagrant box add -f metadata.json
+
+# Cleanup
+vagrant destroy -f
+rm -f $box $metadata
