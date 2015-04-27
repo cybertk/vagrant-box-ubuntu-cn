@@ -33,4 +33,3 @@ vagrant box add -f metadata.json
 
 # Cleanup
 vagrant destroy -f
-rm -f $box $metadata
